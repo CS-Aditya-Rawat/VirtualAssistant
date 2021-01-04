@@ -1,22 +1,3 @@
-const D = window.document;
-
-const element = selector => D.querySelector(selector);
-
-D.addEventListener("DOMContentLoaded",()=>{
-    const Main = element("main");
-    const Askbtn = element("button");
-		const Question = element("input");
-		Askbtn.addEventListener("click",function(){
-			const Text = Question.value;
-			if(Text.length)
-			{
-				addQuestion(Main, Text);
-				Question.value = "";		
-			}
-			
-	});
-});
-
 const addAnswer = (Main, text) =>
 {
     Main.innerHTML += `
@@ -35,7 +16,8 @@ const addQuestion = (Main,text) =>
     `;
 };
 
-const srtbtn = document.querySelector('#btn');
+const voice_btn = document.querySelector('#btn');
+const write_btn = document.querySelector('#question');
 
 var recognition = new webkitSpeechRecognition();
 recognition.continous = false;
@@ -45,13 +27,24 @@ recognition.maxAlternatives = 1;
 
 const synth = window.speechSynthesis;
 
-srtbtn.addEventListener("click", (e) => {
+voice_btn.addEventListener("click", () => {
 	recognition.start();
 });
 
+write_btn.addEventListener("keypress", (e) => {
+	
+	if(e.key == 'Enter'){
+		var content = document.querySelector(".command").innerText;
+		console.log(content);
+	// 	recognition.start();
+	}
+	
+});
+
 recognition.onresult = (e) => {
+	const Main = document.querySelector('main');
 	const transcript = e.results[0][0].transcript;
-	addQuestion(transcript);
+	addQuestion(Main, transcript);
 	if(transcript == 'hello'){
 		const utter = new SpeechSynthesisUtterance("Hi, How are you");
 		synth.speak(utter);

@@ -76,11 +76,12 @@ recognition.onresult = (e) => {
 		addAnswer(Main, utter.text);
 	} 
 	else if(
-		words.forEach((word)=>{
-			word === 'video';
-		})
+		words.includes('video')
+		// words.forEach((word)=>{
+		// 	word == 'video';
+		// })
 	){
-		console.log(word);
+		console.log("HEllo");
 		// $(document).ready(function(){
 		// 	const API_KEY = "AIzaSyA7qnrGy4J8JaB6Op-2ib1la5_MaUwVqUU"
 		

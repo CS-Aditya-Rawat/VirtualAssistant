@@ -102,3 +102,8 @@ button
 {
     float:left;
 }
+
+.hide
+{
+    display:none;
+}

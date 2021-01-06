@@ -14,7 +14,6 @@ const videoSearch = (key, search, maxResults) => {
 				});
 			});
 		};
-
 		
 const currTime = () => {
 	let hours = addZero(today.getHours());
@@ -142,7 +141,7 @@ recognition.onresult = (e) => {
 		  }
 		  weatherBalloon(cityName);
 	}
-	else if(words.includes('joke'))
+	else if(words.includes('tell' && 'joke'))
 	{
 		async function getJoke(){
 			const jokedata = await fetch('https://icanhazdadjoke.com/', {
@@ -154,6 +153,52 @@ recognition.onresult = (e) => {
 			console.log(jokeObj.joke);
 		}
 		getJoke();
+	}
+	else if(words.includes('take' && 'screenshot'))
+	{
+		let utter3 = new SpeechSynthesisUtterance("Please Enter the Url");
+		synth.speak(utter3);
+		const screenShotPopup = () => {
+			$('#ssform').css('display', 'block');
+		};
+
+	
+		const downloadScreenshot = () => {
+			var URL = $('#ssurl').val();
+			const Token = "LAWCQV7YTKNT7PTFJXVSPR3IDT28BDJP"
+			var url = "https://screenshotapi.net/api/v1/screenshot?token=" +Token+"&url="+URL;
+			$.get(url, function(data){
+				console.log(data)
+				$("#img").attr('src', data.screenshot);
+			})
+		}
+		
+		screenShotPopup();
+	}
+	else if(words.includes('tell' && 'news'))
+	{
+		const newsApi = "12855d62b27b40339cb86cc21f36112b";
+
+		let utter4 = new SpeechSynthesisUtterance("Please Enter some topic for me");
+		synth.speak(utter4);
+		const newsFormPopup = () => {
+			$('#newsform').css('display', 'block');
+		};
+		newsFormPopup();
+		const showNews = () => {
+			var query = $('#newsQuery').val();
+			fetch("http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey="+newsApi,{
+				headers : {
+					"Access-Control-Allow-Origin": "*"
+				}
+			})
+			.then(function(resp) { return resp.json() })
+			.then(function(data) {
+				console.log(data);
+			  })
+		};
+		showNews();
+		
 	}
 };
 

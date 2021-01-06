@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./hangman.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="info">
+        Try to guess the hidden word before it's too late! You can guess either one letter at a time or the whole word, but if you get the word wrong you loose 2 guesses!
+    </div>
+    
+    <input type="text" placeholder="Guess">
+    <button style="display:none;">Play Again</button>
+    <div class="word">
+    
+    </div>
+    <div class="hangman">
+    
+    </div>
+    <span style="position:absolute;bottom:10px;left:10px;">
+        <div class="guessesLeft">Guesses left: <span class="bold">10</span></div>
+        <div class="guessed">Guessed letters: <span class="bold"></span></div>
+    </span>
+    
+    <span style="position:absolute;bottom:10px;right:10px;text-align: right;">
+        <div>Streak: <span class="streak bold">0</span></div>
+        <div>Average score: <span class="score bold">-</span></div>
+    </span>
+    
+    <script src="./hangman.js"></script>
+</body>
+</html>

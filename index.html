@@ -16,10 +16,40 @@
         
         <main class="nice-font">
           <!-- QuestionANDAnswer  -->
+          <div class=video>
+            <div id="videos">
+            </div>
+            <!-- YoutubeVideos -->
+          </div>
+          <div class="weather">
+
+          </div>
         </main>
-        <div class=video>
-          <!-- YoutubeVideos -->
+        <!-- TAKE A SCREENSHOT FORM -->
+        <div id="ssform" >
+          <div class="modal-content">
+            <div class="contact-form">
+              <form>
+                  <input id="ssurl" type="text" placeholder="Enter URL">
+                  <button type="submit" onclick=downloadScreenshot()>Download</button>
+              </form>
+            </div>
+          </div>
         </div>
+        <img id="ssimg">
+
+        <!-- GET NEWS QUERY -->
+        <div id="newsform" >
+          <div class="modal-content">
+            <div class="contact-form">
+              <form>
+                  <input id="newsQuery" type="text" placeholder="Enter some topic">
+                  <button type="submit">Download</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
         <div id="last"></div>
         <footer>
             <div id="command">

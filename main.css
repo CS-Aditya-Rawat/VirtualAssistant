@@ -129,6 +129,14 @@ button
     width: 60%;
   }
 
+  #ssimg{
+      width: 90%;
+      height:auto;
+      margin-bottom: 60px;
+      display: none;
+      border: 1px solid #000;
+  }
+
   form {
     padding: 25px;
     margin: 25px;

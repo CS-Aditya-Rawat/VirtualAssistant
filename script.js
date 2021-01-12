@@ -306,7 +306,7 @@ recognition.onresult = (e) => {
     dest();
     recognition.onresult = (e) => {
       var startPos = e.results[0][0].transcript;
-      var desPos = e.results[1][0].transcript;
+      var desPos = e.results[1][0].transcript.trim();
     };
   }
 };

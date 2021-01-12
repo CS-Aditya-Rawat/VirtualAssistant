@@ -4,6 +4,11 @@
         
         <title>Assistant</title>
         <meta charset="UTF-8" />
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF9ozOtgdIWdYxf-msMaEIJ-8AiGiykOE&callback=initMap&libraries=&v=weekly"
+          defer
+        ></script>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
         <link rel='stylesheet' href='main.css' />
@@ -49,7 +54,10 @@
             </div>
           </div>
         </div>
-
+        <!--GOOGLE MAPS-->
+        <div id="floating-panel">
+        </div>
+        <div id="map"></div>
         <div id="last"></div>
         <footer>
             <div id="command">

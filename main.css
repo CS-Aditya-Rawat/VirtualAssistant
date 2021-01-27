@@ -1,23 +1,211 @@
-html,
+/* html,
 body {
   padding: 0;
   margin: 0;
-  max-width: 100%;
   user-select: none;
   -ms-user-select: none;
   -moz-user-select: none;
+  background-image:url('logo.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:30% 50%;
+} */
+
+:root {
+  --primary-heading-text: #181818;
+  --primary-background-color: #fffdf9;
+  --secondary-background-color: #faeee7;
+  --scrollbar-track-color: #eee;
+  --scrollbar-thumb-color: #c8c8c8;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-image:url('lex.png');
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:30% 50%;
+background-attachment: fixed;
+  scroll-behavior: smooth;
+  /* Specifically for firefox browser */
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: var(--scrollbar-thumb-color);
+}
 .nice-font {
   font-family: "Josefin Sans", sans-serif;
 }
+.btn-secondary{
+  color: #fff;
+  background: #008dd2;
+  padding:5px;
+  text-decoration: none;
+
+}
+.btn-first{
+  align-items: center;
+  justify-content: center;
+  color: #008dd2;
+  background: #fff;
+  display:flex;
+  border:3px solid  #008dd2;
+  border-radius: 15px;
+  margin:5px;
+  padding:10px;
+  text-decoration: none;
+
+}
+
+#justcheck {
+  border: 2px #177117;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  margin-left: 10px;
+}
+
+#map {
+  height: 100%;
+}
+
+header {
+  display: inline;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.8rem;
+  position: fixed;
+  width: 100%;
+  background-color: var(--primary-background-color);
+  z-index: 2;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+
+.sticky {
+  padding: 0.7rem 1.5rem;
+  box-shadow: 0 2px 4px #ddd;
+}
+
+.navbar {
+  font-size: 18px;
+}
+
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+
+.nav-links, .logo {
+  text-decoration: none;
+  color: black;
+}
+
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+
+.main-nav li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  margin-left: 1rem;
+  transition: 0.3s ease-in-out all;
+}
+
+.logo {
+  display: inline-block;
+  margin-left: 0px;
+  font-family: Mulish;
+  font-style: normal;
+  color: #202020;
+  text-decoration: none;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  color: black;
+  font-size: 24px;
+}
+
+.active {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  
+header {
+  padding:1.5rem;
+}
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 30px;
+    align-items: center;
+  }
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  .main-nav li {
+    margin: 0;
+  }
+  .nav-links {
+    margin-left: 40px;
+  }
+  .logo {
+    margin-top: 0;
+    margin-left:20px;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+  .nav-links:hover {
+    color: white;
+    /* background-color: rgba(9, 133, 227, 0.2); */
+    background-color: #008dd2;
+  }
+}
+/* 
 
 header {
   text-align: center;
-}
-
+  width: 99%;
+  height: auto;
+  position: fixed;
+  background-color:#fff;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+} */
 main {
+
   padding: 10px;
+  padding-top: 90px;
   margin-bottom: 50px;
 }
 footer{
@@ -59,7 +247,7 @@ footer #command {
   outline: 0;
 }
 
-button {
+#btn {
   background-color: #1e88e5;
   color: #fff;
   border-radius: 20px;
@@ -77,9 +265,20 @@ button {
   display: table;
   clear: both;
 }
-
+.row2 {
+  margin-bottom: 10px;
+  display: block;
+}
+.row2::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card-text{
+  font-size:15px;
+}
 .chat {
-  border: 0.7px solid #9e9e9e50;
+  border: 3px solid #9e9e9e50;
   word-wrap: break-word;
   background-color: #fff;
   border-radius: 20px;
@@ -105,18 +304,30 @@ button {
 
 /* POPUP */
 #ssform,
-#newsform {
+#newsform,
+#map__form {
   display: none;
-  position: fixed;
-  z-index: 8;
+  top:0;
   left: 0;
-  top: 0;
+  position: absolute;
+  z-index: 999;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgb(0, 0, 0);
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0.4);
 }
+
+.contact-form{
+  width: 100%;
+  height: 100%;
+  
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+
 .modal-content {
   margin: 50px auto;
   border: 1px solid #999;
@@ -126,16 +337,8 @@ button {
 #ssimg {
   width: 90%;
   height: auto;
-  margin-bottom: 60px;
   display: none;
   border: 1px solid #000;
-}
-
-form {
-  padding: 25px;
-  margin: 25px;
-  box-shadow: 0 2px 5px #f5f5f5;
-  background: #eee;
 }
 
 .contact-form button {
@@ -215,4 +418,137 @@ body {
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+form label,
+form select {
+  position: relative;
+  display: inline-block;
+}
+
+form label input,
+form select {
+
+  position: relative;
+  font: 18px Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  display: block;
+  border: none;
+  padding: 20px;
+  width: 300px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+form select {
+  display: inline-block;
+}
+
+form label input::-moz-placeholder {
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #999;
+  font: 18px Helvetica, Arial, sans-serif;
+}
+
+form label input:-ms-input-placeholder {
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #999;
+  font: 18px Helvetica, Arial, sans-serif;
+}
+
+form label input::placeholder {
+  transition: all 0.2s ease-in-out;
+  color: #999;
+  font: 18px Helvetica, Arial, sans-serif;
+}
+
+form label input:focus,
+form label input.populated {
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+
+form label input:focus::-moz-placeholder,
+form label input.populated::-moz-placeholder {
+  color: transparent;
+}
+
+form label input:focus:-ms-input-placeholder,
+form label input.populated:-ms-input-placeholder {
+  color: transparent;
+}
+
+form label input:focus::placeholder,
+form label input.populated::placeholder {
+  color: transparent;
+}
+
+form label input:focus+span,
+form label input.populated+span {
+  opacity: 1;
+  top: 10px;
+}
+
+form label span {
+  color: #008dd2;
+  font: 13px Helvetica, Arial, sans-serif;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+form input[type=button] {
+  transition: all 0.2s ease-in-out;
+  font: 18px Helvetica, Arial, sans-serif;
+  border: none;
+  position: relative;
+  display: block;
+  background: #008dd2;
+  color: #fff;
+  padding: 16px 40px;
+}
+
+form input[type=button]:hover {
+  background: #192b3f;
+}
+
+.heading {
+  margin-bottom: 50px;
+  display: block;
+  position: relative;
+  color: white;
+}
+
+.width {
+  width: 620px;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .width {
+      width: 300px;
+  }
+
+
+  form label,
+  form select {
+      position: relative;
+      display: block;
+  }
+
 }

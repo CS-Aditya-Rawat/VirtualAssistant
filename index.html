@@ -85,10 +85,7 @@
           </div>
           <div><input type="button" value="Download" onclick="downloadScreenshot()"></div>
         </form>
-        <!-- <form>
-                  <input id="ssurl" type="text" placeholder="Enter URL">
-                  <button type="button" onclick="downloadScreenshot()">Download</button>
-              </form> -->
+        
       </div>
     </div>
     <!-- <img id="ssimg"> -->
@@ -102,32 +99,19 @@
               <option value="au">Australia</option>
               <!-- <option value="br">Brazil</option> -->
               <option value="ca">Canada</option>
-              <!-- <option value="ch">Switzerland</option> -->
-              <!-- <option value="cn">China</option> -->
-              <!-- <option value="de">Germany</option> -->
-              <!-- <option value="eg">Egypt</option> -->
-              <!-- <option value="es">Spain</option>
-              <option value="fr">France</option> -->
+             
               <option value="gb">United Kingdom</option>
               <!-- <option value="gr">Greece</option>
               <option value="hk">Hong Kong</option> -->
               <option value="ie">Ireland</option>
               <!-- <option value="il">Israel</option> -->
               <option value="in">India</option>
-              <!-- <option value="it">Italy</option> -->
-              <!-- <option value="jp">Japan</option>
-              <option value="nl">Netherlands</option>
-              <option value="no">Norway</option>
-              <option value="pe">Peru</option> -->
+              
               <option value="ph">Philippines</option>
               <option value="pk">Pakistan</option>
-              <!-- <option value="pt">Portugal</option> -->
-              <!-- <option value="ro">Romania</option>
-              <option value="ru">Russian Federation</option>
-              <option value="se">Sweden</option> -->
+              
               <option value="sg">Singapore</option>
-              <!-- <option value="tw">Taiwan, Province of China</option>
-              <option value="ua">Ukraine</option> -->
+             
               <option value="us" selected>United States</option>
 
             </select>
@@ -144,87 +128,16 @@
               <option value="science">Science</option>
               <option value="health">Health</option>
             </select>
-            <!-- <label>
-            <input id="newsQuery" type="text" placeholder="Enter some topic" required>
-            <span>Enter some topic</span>
-          </label> -->
+            
           </div>
           <div><input type="button" value="Show News" onclick="newsBallon()"></div>
         </form>
-        <!-- <form>
-                <input id="ssurl" type="text" placeholder="Enter URL">
-                <button type="button" onclick="downloadScreenshot()">Download</button>
-            </form> -->
+       
       </div>
 
 
     </div>
 
-
-
-
-    <!-- TradingView Widget BEGIN -->
-    <!-- <div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/markets/stocks-india/" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
-  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
-  {
-  "colorTheme": "light",
-  "dateRange": "12M",
-  "exchange": "BSE",
-  "showChart": true,
-  "locale": "in",
-  "largeChartUrl": "",
-  "isTransparent": false,
-  "showSymbolLogo": false,
-  "width": "400",
-  "height": "600",
-  "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
-  "plotLineColorFalling": "rgba(33, 150, 243, 1)",
-  "gridLineColor": "rgba(240, 243, 250, 1)",
-  "scaleFontColor": "rgba(120, 123, 134, 1)",
-  "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
-  "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
-  "symbolActiveColor": "rgba(33, 150, 243, 0.12)"
-}
-  </script>
-</div> -->
-
-    <!-- TradingView Widget BEGIN -->
-    <!-- <div class="tradingview-widget-container">
-  <div id="tradingview_0e20c"></div>
-  <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">Stock Realtime Chart</span></a></div>
-</div> -->
-    <!-- TradingView Widget BEGIN -->
-    <!-- TradingView Widget BEGIN -->
-
-    <!-- TradingView Widget END -->
-    <!-- TradingView Widget END -->
-    <!-- <div class="row">
-  <div class="chat answer" id="videos"><script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script></div>
-</div> -->
-    <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> -->
-    <!-- TradingView Widget END -->
-
-    <!-- <div id="newsform">
-    <div class="modal-content">
-      <div class="contact-form">
-        <form>
-          <input id="newsQuery" type="text" placeholder="Enter some topic">
-          <button type="button" onclick="showNews()">Download</button>
-        </form>
-      </div>
-    </div>
-  </div> -->
-    <!--GOOGLE MAPS-->
-    <!-- <div id="floating-panel">
-        </div>
-        <div id="map"></div>
-        <div id="last"></div> -->
-    <!-- <div id="list-output" class="">
-    <div class="row">
-    </div>
-  </div> -->
     <!--Footer-->
 
     <div id="Stock" class="modalb">
@@ -431,50 +344,7 @@
       }
     });
   </script>
-  <!-- 1. The <iframe> (and video player) will replace this <div> tag.
-    <div id="player"></div>
-
-    <script>
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
-
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'M7lc1UVf-VE',
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
-
-      // 4. The API will call this function when the video player is ready.
-      function onPlayerReady(event) {
-        event.target.playVideo();
-      }
-
-      // 5. The API calls this function when the player's state changes.
-      //    The function indicates that when playing a video (state=1),
-      //    the player should play for six seconds and then stop.
-      var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
-          done = true;
-        }
-      }
-      function stopVideo() {
-        player.stopVideo();
-      } -->
+  
   </script>
 </body>
 

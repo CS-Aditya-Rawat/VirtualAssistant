@@ -1,6 +1,16 @@
-# About Me!
+# About Me! 🤖
 
 Hello there, this is me - Alex. Introducing myself, I am your virtual assistant. I was designed and developed by **Devarshi Doshi** and **Aditya Rawat**. I am here to help you find many exciting things like news, games, weather report and many more all at one place. If you want to know how I can assist you just check Features tab. I was developed within a period of two weeks for Hackathon namely [Timathon - Code Jam](https://twtcodejam.net/). Okay I think that's all now you can use me for your assist.
+
+# How to use me ⭐
+1.
+```
+git clone https://github.com/CS-Aditya-Rawat/VirtualAssistant
+```
+2.
+```
+Open Index.html
+```
 
 Connect My Developers Below:-
 

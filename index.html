@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>lex</title>
+  <title>Alex</title>
   <meta charset="UTF-8" />
   <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
         <script
@@ -15,17 +15,14 @@
           defer
         ></script> -->
   <link rel="icon" href="logo.png">
-  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css"/>
-<script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"></script>
-<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"></script>
-<script src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
-<script src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital@1&display=swap" rel="stylesheet">
 
   <link rel='stylesheet' href='main.css' />
 
@@ -40,13 +37,20 @@
       <a href="#" class="logo">
         <img src="logo.png" width="60px" height="50px">
       </a>
+
       <ul class="main-nav" id="js-menu">
 
-        <li><a class="nav-links">Features</a></li>
+        <li><a id="myBtn2" class="nav-links">Features</a></li>
         <li><a id="myBtn" class="nav-links">About Me</a></li>
       </ul>
     </nav>
   </header>
+  <div class="icon" id="icon">
+    <div class="bar" style="background-color: #3498db; margin-left: -60px;"></div>
+    <div class="bar" style="background-color: #e74c3c; margin-left: -20px;"></div>
+    <div class="bar" style="background-color: #f1c40f; margin-left: 20px;"></div>
+    <div class="bar" style="background-color: #2eb869; margin-left: 60px;"></div>
+  </div>
   <!-- <header>
             <h1 class="nice-font" >
               <span style="float: left;">Alex</span> 
@@ -69,54 +73,100 @@
             </div>
         </div>
            -->
-  <!-- TAKE A SCREENSHOT FORM -->
-  <div id="ssform">
-    <div class="contact-form">
-      <form>
-        <div>
-          <label>
-            <input id="ssurl" type="text" placeholder="Enter URL" required>
-            <span>Enter URL</span>
-          </label>
-        </div>
-        <div><input type="button" value="Download" onclick="downloadScreenshot()"></div>
-      </form>
-      <!-- <form>
+    <!-- TAKE A SCREENSHOT FORM -->
+    <div id="ssform">
+      <div class="contact-form">
+        <form>
+          <div>
+            <label>
+              <input id="ssurl" type="text" placeholder="Enter URL" required>
+              <span>Enter URL</span>
+            </label>
+          </div>
+          <div><input type="button" value="Download" onclick="downloadScreenshot()"></div>
+        </form>
+        <!-- <form>
                   <input id="ssurl" type="text" placeholder="Enter URL">
                   <button type="button" onclick="downloadScreenshot()">Download</button>
               </form> -->
+      </div>
     </div>
-  </div>
-  <!-- <img id="ssimg"> -->
+    <!-- <img id="ssimg"> -->
 
-  <!-- GET NEWS QUERY -->
-  <div id="newsform">
-    <div class="contact-form">
-      <form>
-        <div>
-          <label>
+    <!-- GET NEWS QUERY -->
+    <div id="newsform">
+      <div class="contact-form">
+        <form>
+          <div>
+            <select class="option" id="Country" type="text" name="Country">
+              <option value="au">Australia</option>
+              <!-- <option value="br">Brazil</option> -->
+              <option value="ca">Canada</option>
+              <!-- <option value="ch">Switzerland</option> -->
+              <!-- <option value="cn">China</option> -->
+              <!-- <option value="de">Germany</option> -->
+              <!-- <option value="eg">Egypt</option> -->
+              <!-- <option value="es">Spain</option>
+              <option value="fr">France</option> -->
+              <option value="gb">United Kingdom</option>
+              <!-- <option value="gr">Greece</option>
+              <option value="hk">Hong Kong</option> -->
+              <option value="ie">Ireland</option>
+              <!-- <option value="il">Israel</option> -->
+              <option value="in">India</option>
+              <!-- <option value="it">Italy</option> -->
+              <!-- <option value="jp">Japan</option>
+              <option value="nl">Netherlands</option>
+              <option value="no">Norway</option>
+              <option value="pe">Peru</option> -->
+              <option value="ph">Philippines</option>
+              <option value="pk">Pakistan</option>
+              <!-- <option value="pt">Portugal</option> -->
+              <!-- <option value="ro">Romania</option>
+              <option value="ru">Russian Federation</option>
+              <option value="se">Sweden</option> -->
+              <option value="sg">Singapore</option>
+              <!-- <option value="tw">Taiwan, Province of China</option>
+              <option value="ua">Ukraine</option> -->
+              <option value="us" selected>United States</option>
+
+            </select>
+          </div>
+          <div>
+            <select class="option" id="newsQuery" type="text" name="newsQuery">
+              <option value="breaking-news">Breaking News</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="sports">Sports</option>
+              <option value="world">World</option>
+              <option value="nation">Nation</option>
+              <option value="business">Business</option>
+              <option value="technology">Technology</option>
+              <option value="science">Science</option>
+              <option value="health">Health</option>
+            </select>
+            <!-- <label>
             <input id="newsQuery" type="text" placeholder="Enter some topic" required>
             <span>Enter some topic</span>
-          </label>
-        </div>
-        <div><input type="button" value="Show News" onclick="newsBallon()"></div>
-      </form>
-      <!-- <form>
+          </label> -->
+          </div>
+          <div><input type="button" value="Show News" onclick="newsBallon()"></div>
+        </form>
+        <!-- <form>
                 <input id="ssurl" type="text" placeholder="Enter URL">
                 <button type="button" onclick="downloadScreenshot()">Download</button>
             </form> -->
+      </div>
+
+
     </div>
-  </div>
-  <div class="chat__map">
-    <div id="justcheck">
-      <div id="map"></div>
-      <div id="panel"></div>
-    </div>
-  </div>
-      <!-- TradingView Widget BEGIN -->
-<!-- <div class="tradingview-widget-container">
+
+
+
+
+    <!-- TradingView Widget BEGIN -->
+    <!-- <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/markets/stocks-india/" rel="noopener" target="_blank"><span class="blue-text">Stock Market Today</span></a> by TradingView</div>
+  <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/markets/stocks-india/" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
   <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
   {
   "colorTheme": "light",
@@ -139,29 +189,24 @@
 }
   </script>
 </div> -->
-<!-- TradingView Widget END -->
-  <div id="map__form" >
-      <div class="contact-form">
-        <form>
-          <div>
-            <label>
-              <input id="origin" type="text" placeholder="Enter your starting point" required>
-              <span>Enter your starting point</span>
-            </label>
-          </div>
-          <div>
-            <label>
-              <input id="destination" type="text" placeholder="Enter your destination point" required>
-              <span>Enter your destination point</span>
-            </label>
-          </div>
-            <!-- <input id="origin" type="text" placeholder="Enter your starting point">
-            <input id="destination" type="text" placeholder="Enter your destination point"> -->
-        <div><input type="button" value="Show Me Route" onclick="getLocationDetails()"></div>
-        </form>
-      </div>
-  </div>
-  <!-- <div id="newsform">
+
+    <!-- TradingView Widget BEGIN -->
+    <!-- <div class="tradingview-widget-container">
+  <div id="tradingview_0e20c"></div>
+  <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener" target="_blank"><span class="blue-text">Stock Realtime Chart</span></a></div>
+</div> -->
+    <!-- TradingView Widget BEGIN -->
+    <!-- TradingView Widget BEGIN -->
+
+    <!-- TradingView Widget END -->
+    <!-- TradingView Widget END -->
+    <!-- <div class="row">
+  <div class="chat answer" id="videos"><script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script></div>
+</div> -->
+    <!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> -->
+    <!-- TradingView Widget END -->
+
+    <!-- <div id="newsform">
     <div class="modal-content">
       <div class="contact-form">
         <form>
@@ -171,32 +216,197 @@
       </div>
     </div>
   </div> -->
-  <!--GOOGLE MAPS-->
-  <!-- <div id="floating-panel">
+    <!--GOOGLE MAPS-->
+    <!-- <div id="floating-panel">
         </div>
         <div id="map"></div>
         <div id="last"></div> -->
-  <!-- <div id="list-output" class="">
+    <!-- <div id="list-output" class="">
     <div class="row">
     </div>
   </div> -->
-  <!--Footer-->
+    <!--Footer-->
 
-</main>
-  <div id="myModal" class="modal">
+    <div id="Stock" class="modalb">
 
-    <!-- Modal content -->
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p>Some text in the Modal..</p>
+      <!-- Modal content -->
+      <div class="modal-contentb">
+        <span class="closeb">&times;</span>
+        <br>
+        <br>
+        <!-- TradingView Widget BEGIN -->
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div id="tradingview_854fc"></div>
+          <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/NASDAQ-AAPL/"
+              rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+          <script type="text/javascript">
+            new TradingView.widget(
+              {
+                "width": 980,
+                "height": 610,
+                "symbol": "NASDAQ:AAPL",
+                "interval": "D",
+                "timezone": "Etc/UTC",
+                "theme": "light",
+                "style": "1",
+                "locale": "in",
+                "toolbar_bg": "#f1f3f6",
+                "enable_publishing": false,
+                "allow_symbol_change": true,
+                "container_id": "tradingview_854fc"
+              }
+            );
+          </script>
+        </div>
+        <!-- TradingView Widget END -->
+        <!-- TradingView Widget END -->
+        <!-- TradingView Widget END -->
+
+      </div>
+    </div>
+    <div id="myModal" class="modal trial2">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>About Me</h2><br>
+
+        <span class="about">
+          Hello there, this is me - Alex. Introducing myself, I am your virtual assistant. I was designed and developed
+          by
+          <b>Devarshi Doshi</b> and <b>Aditya Rawat</b>. I am here to help you find many exciting things like news,
+          games,
+          weather report and many more all at one place. If you want to know how I can assist you just check Features
+          tab.
+          I was developed within a period of two weeks for Hackathon namely <a href="https://twtcodejam.net/"
+            target="_blank" style="color:black;"><b>Timathon - Code Jam</b></a>. Okay I think that's all now you can use
+          me for your assist.<br><br>
+          Connect My Developers Below:-<br><br>
+          Devarshi Doshi:-
+          <a href="https://twitter.com/DoshiDevarshi" target="_blank"><img
+              src="https://img.icons8.com/color/48/000000/twitter--v2.png" style="vertical-align: middle;" /></a>
+          <a href="https://www.linkedin.com/in/devarshi-doshi-45571a13b/" target="_blank"><img
+              src="https://img.icons8.com/fluent/48/000000/linkedin.png" style="vertical-align: middle;" /></a>
+          <a href="https://github.com/devarshidoshi" target="_blank"><img
+              src="https://img.icons8.com/fluent/48/000000/github.png" style="vertical-align: middle;" /></a>
+          <a href="https://devarshidoshi.github.io/Portfolio/" target="_blank"><img
+              src="https://img.icons8.com/color/48/000000/name.png" style="vertical-align: middle;" /></a><br><br>
+          Aditya Rawat:-
+          <a href="https://twitter.com/CsAdityaRawat" target="_blank"><img
+              src="https://img.icons8.com/color/48/000000/twitter--v2.png" style="vertical-align: middle;" /></a>
+          <a href="https://www.linkedin.com/in/cs-aditya-rawat/" target="_blank"><img
+              src="https://img.icons8.com/fluent/48/000000/linkedin.png" style="vertical-align: middle;" /></a>
+          <a href="https://github.com/CS-Aditya-Rawat" target="_blank"><img
+              src="https://img.icons8.com/fluent/48/000000/github.png" style="vertical-align: middle;" /></a></span>
+      </div>
+
     </div>
 
-  </div>
+
+    <div id="Features" class="modalc">
+
+      <!-- Modal content -->
+      <div class="modal-contentc">
+        <span class="closec">&times;</span>
+        <h2>Features</h2><br>
+        <br><br>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/messaging-.png"
+            style="vertical-align: bottom; margin-right:10px;" />
+
+          <span class="about">Just Say Hello and I'll Reply You</span> <br> <br>
+        </div>
+
+
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/youtube-play.png" style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; Just Say Play Video and name of video you want search Eg. Play Video
+            Shinchan</span> <br> <br>
+        </div>
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/screenshot.png" style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; Just Say Take a Screenshot and just enter URL of site to get its
+            screenshot</span> <br> <br>
+        </div>
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/partly-cloudy-day--v2.png" style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; Just Say Weather at and name of city to get its current weather Eg.
+            Weather at California</span> <br><br>
+        </div>
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/google-news.png" style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; Just Say news and select your country and topic of news. There are 9
+            awesome topics for news namely Breaking-News, World, Nation, Business, Technology, Entertainment, Sports,
+            Science and Health.</span> <br> <br>
+        </div>
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/nintendo-gamecube-controller.png"
+            style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; Just Say Play Games and Enjoy any of the four games ( 2048, Hangman,
+            Stone Paper Scissor, Tic Tac Toe)</span> <br> <br>
+        </div>
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/quote.png" style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; Just Say Quotes and get a amazing motivational quotes with author
+            name</span> <br> <br>
+        </div>
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/story-book.png" style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; Just Say Search Book and name of the book you want to search Eg.
+            search book harry potter and you will get 10 books to read related to search</span> <br> <br>
+        </div>
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/smiling.png" style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; Just Say Tell a Joke and fill yourself with happiness</span> <br>
+          <br>
+        </div>
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/apple-map.png" style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; Just Say Get Directions and enter your origin and destination, i'll
+            guide you till Destiny.</span> <br> <br>
+        </div>
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/economic-improvement.png" style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; Just Say Get Stocks and then you can search any stock's realtime
+            details.</span> <br> <br>
+        </div>
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/timetable.png" style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; Just Say Tell Date and Get Current Date and Time</span> <br> <br>
+        </div>
+        <hr>
+        <div>
+          <img src="https://img.icons8.com/color/48/000000/coming-soon.png" style="vertical-align: bottom;" />
+          <span class="about">&nbsp; &nbsp; &nbsp; And Still More such amazing features are coming Soon</span> <br> <br>
+        </div>
+        <hr>
+      </div>
+    </div>
+  </main>
+
+
+
+
   <footer>
     <div id="command">
       <button id="btn"><i class="fas fa-microphone fa-3x"></i></button>
     </div>
   </footer>
+  <br>
+  <br>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src='script.js'></script>
@@ -204,7 +414,12 @@
     let mainNav = document.getElementById('js-menu');
     let navBarToggle = document.getElementById('js-navbar-toggle');
     let btn = document.getElementById('btn3');
-
+    var modal = document.querySelector(".modal");
+	// Get the button that opens the modal
+	var btn2 = document.getElementById("myBtn");
+	
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
     navBarToggle.addEventListener('click', function () {
       mainNav.classList.toggle('active');
       if (btn.classList.contains('fa-bars')) {

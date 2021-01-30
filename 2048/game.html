@@ -1,17 +1,32 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="style.css">
-        <script type="text/javascript" src="app.js"></script>
-    </head>
-    <body>
-        <canvas id="js-board" width="600" height="600"></canvas>
 
-        <div id="debugPanel">
-            <button type="button" id="js-export">Export</button>
-            <button type="button" id="js-load">Load</button>
-            <textarea rows="4" cols="50" id="js-textbox"></textarea>
-        </div>
-        
-    </body>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>2048</title>
+    <link rel="icon" href="../logo.png">
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+    <canvas id="js-board" width="600" height="600"></canvas>
+
+    <!-- <div id="debugPanel">
+        <button type="button" id="js-export">Export</button>
+        <button type="button" id="js-load">Load</button>
+        <textarea rows="4" cols="50" id="js-textbox"></textarea>
+    </div> -->
+<script>
+    window.onbeforeunload = function() {
+  return "Data will be lost if you leave the page, are you sure?";
+};
+
+
+            window.setTimeout(function(){
+                alert("You can play 2048 with keyboard arrows");
+            }, 500); 
+</script>
+</script>
+</body>
+
 </html>

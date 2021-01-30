@@ -23,7 +23,8 @@ src="https://img.icons8.com/fluent/48/000000/github.png"  style="vertical-align:
 
 # My Features
 
-<img src="https://img.icons8.com/color/36/000000/messaging-.png" style="vertical-align: middle; margin-right:10px;" /> Just Say Hello and I'll Reply You
+<img src="https://img.icons8.com/color/36/000000/messaging-.png" style="vertical-align: middle; margin-right:10px;" /> 
+Just Say Hello and I'll Reply You
 <hr>
 <img src="https://img.icons8.com/color/48/000000/youtube-play.png" style="vertical-align: middle;margin-right:10px;" />Just Say Play Video and name of video you want search Eg. Play Video Shinchan
 <hr>

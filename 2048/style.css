@@ -1,4 +1,18 @@
 canvas {
     border-style: solid;
     border-width: 2px;
+    position: relative;
 }
+
+html,body{
+    display:flex;
+    background-color: rgb(39, 41, 68);
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    html, body {
+     width:800px;
+    }
+  }

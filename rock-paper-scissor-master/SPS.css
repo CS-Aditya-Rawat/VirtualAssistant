@@ -8,6 +8,8 @@ section {
   height: 100vh;
   background-color: rgb(39, 41, 68);
   font-family: sans-serif;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .score {
@@ -43,11 +45,12 @@ section {
 .match button {
   width: 150px;
   height: 50px;
+  margin-bottom:10px;
   background: none;
   border: none;
   color: rgb(224, 224, 224);
   font-size: 20px;
-  background: rgb(45, 117, 96);
+  background: #0054fa;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -70,6 +73,13 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .options{
+    flex-direction: column;
+  }
 }
 
 .player-hand {

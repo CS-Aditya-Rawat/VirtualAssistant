@@ -5,8 +5,7 @@
 body{
     transition: .2s background;
     font-family: 'Segoe UI', 'Roboto', arial, sans-sarif;
-    background: rgb(255,0,53);
-    background: linear-gradient(135deg, rgba(33, 34, 176, 1) 0%, rgba(255,0,53,1) 100%);
+    background-color: rgb(39, 41, 68);
     color: white;
     height: 100 vh;
 }
